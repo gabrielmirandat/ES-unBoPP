@@ -1,0 +1,75 @@
+1. Vocabulário
+repositório local, repositório remoto, dar clone, ver status, dar pull, dar add, commitar, dar push, ..
+
+repositório local - significa a pasta de trabalho no seu computador. Quando você associa essa 
+pasta ao servidor git (seja por git init ou por git clone), o arquivo oculto .git é criado na raiz deste repositório.
+
+repositório remoto - significa sua pasta de trabalho no servidor git. É ela que é compartilhada
+com todos os membros do grupo.
+
+dar clone - para clonar um repositório remoto para um repositório local. Isto  cria uma pasta com o mesmo nome 
+da pasta remota no seu computador, sendo que já vem com o arquivo .git oculto.
+
+ver status - com git status, você vê as mudanças, adições ou remoções que você fez que estão diferentes no seu 
+repositório local em relação ao repositório remoto.
+
+dar pull - você sempre deve dar git pull ao iniciar o trabalho. O que ele faz é trazer todas as mudanças que os outros 
+membros fizeram no repositório remoto para seu repositório local.
+
+dar add - você deve dar git add nos arquivos que quer uploadar do seu local para o remoto. Ou seja, você pode manter 
+arquivos apenas no seu local, é só não dar git add nele. Geralmente não mandamos executáveis ao remoto.
+
+commitar - sempre que você adiciona uma mudança, com git add, você deve dizer o que ela faz. Isso é adquirido com 
+git commit.
+
+dar push - com git push você associa todos os seus commits para o repositório remoto efetivamente.
+
+2. Comandos
+
+> git add -A - para adicionar todas as mudanças, sejam adições, modificações ou remoção de arquivos. Esta não é uma boa prática 
+se você fez mudanças em códigos que não compartilham similaridas, pois vão compartilhar um unico commit.
+
+> git rm -f <arquivo> - para remover um arquivo do repositório remoto. Não se usa muito git rm, no lugar pode se usar 
+git add -u <arquivo>.
+
+3. Exemplo (nosso caso)
+
+- para a primeira vez -
+* com o terminal, escolha a pasta onde clonar o rep. remoto.
+	> git clone https://github.com/gabrielmirandat/ES-unBoPP.git
+
+- sempre -
+* com o terminal no rep. local.
+	> git pull - para atualizar os commits dos outros membros que estão no remoto mas não no seu local
+* faça sua modificações
+*ex1.:
+	- alterei code/front_end.htm
+	- adicionei o arquivo content/template.jpg
+	- removi code/back_end.py
+
+	> git status - para ver suas modificações
+		* modificações não adicionar ficam em vermelho, adicionadas ficam em verde.
+	> git add code/fron_end.htm
+	> git status - vai dando git status pra ver se ficou verdinho o que adicionou...(vou abreviar git status por gs)
+				 - se deu certo, git commit nele, senão, tenta outra forma de adicionar..
+	> git commit -m "Alterado code/front_end.htm: novo botão para ver eventos."
+	> gs
+	> git add content/template.jpg
+	> gs
+	> git commit -m "Adicionado arquivo content/template.jpg."
+	> gs
+	> git rm "code/back_end.py"
+	> gs
+	> git commit -m "Removido code/back_end."
+	> gs
+	> git push - para mandar todos os commits para o rep. remoto. Se você olhar no site do projeto, deve ver todas as suas 	             modificações lá 
+* ex2.:
+	- adicionei uma nova pasta no local, com vários arquivos dentro similares.
+	> git status
+	> git add -A - adiciona tudo!
+	> git status
+	> git commit -m "Adicionado projeto de ..."
+	> git push
+
+Qualquer problema avisem
+
