@@ -1,0 +1,15 @@
+Pessoal, to pegando as coisas daqui:
+	> HTML5 :: http://www.tutorialspoint.com/html5/html5_web_sql.htm 
+	> Javascript :: http://www.tutorialspoint.com/javascript/index.htm
+	> CSS :: http://www.tutorialspoint.com/css/index.htm
+	> Django :: http://www.tutorialspoint.com/django/index.htm
+
+Usar front_end pronto?
+ - site wix ?
+ - site wordpress ?
+
+Será?
+https://www.codecademy.com/pt/tracks/projects
+https://googlecreativelab.github.io/coder-projects/
+https://googlecreativelab.github.io/coder-projects/projects/digital_clock/
+http://dzineblog.com/30-html-css-projects-from-codepen/
