@@ -13,3 +13,59 @@ https://www.codecademy.com/pt/tracks/projects
 https://googlecreativelab.github.io/coder-projects/
 https://googlecreativelab.github.io/coder-projects/projects/digital_clock/
 http://dzineblog.com/30-html-css-projects-from-codepen/
+
+http://tableless.github.io/iniciantes/manual/obasico/o-que-front-back.html
+
+As linguagens client-side (front-end) são linguagens onde apenas o seu NAVEGADOR vai entender. Quem vai processar essa linguagem não é o servidor, mas o seu browser. 
+
+As linguagens server-side (back-end) são linguagens que o SERVIDOR entende. Isso quer dizer que vai escrever um código onde o servidor vai processá-lo e então vai mandar para o seu navegador a resposta.
+
+https://www.oficinadanet.com.br/post/13541-afinal-o-que-e-frontend-e-o-que-e-backend-
+FRONTEND => Interface de interação com o usuário 
+BACKEND => Sistema responsável pela regra de negócios, webservices e APIs de uma aplicação
+
+##DJANGO##
+
+#Install
+sudo apt-get update
+sudo apt-get install python-django
+django-admin --version //1.6.1
+ou http://www.tutorialspoint.com/django/django_environment.htm
+
+#Creating a project
+terminal -> cd para pasta onde ficara o projeto
+django-admin startproject myproject (aqui server)
+
+será criado: (substitua myproject por server..)
+
+myproject/
+   manage.py       //django-admin. Interaction with terminal (start server, sync db) $ python manage.py help
+   myproject/
+      __init__.py
+      settings.py  
+      urls.py      //links of your program and function to call
+      wsgi.py
+
+settings.py
+- DEBUG = True only in development mode.
+- DATABASES = The example is for SQLite engine.
+- Before setting any new engine, make sure you have the correct db driver installed.
+- You can also set others options like: TIME_ZONE, LANGUAGE_CODE, TEMPLATE…
+
+PARA RODAR:: python manage.py runserver
+
+PAREI AQUIII => Django - Apps Life Cycle
+
+
+
+
+##MySQL##
+https://www.youtube.com/watch?v=uqaoGTnxqNw
+
+sudo apt-get install mysql-server
+//escolha uma senha
+mysql -u root -p
+
+
+
+
