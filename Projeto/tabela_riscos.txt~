@@ -1,0 +1,33 @@
+CAUSA				RISCO						EFEITO				PIE			PRP							PRI
+
+Manutenção do site		Custo elevado de manutenção		Atrasos na atualização	AAA			Tentar reduzir a complexidade		
+trabalhosa para os 		e centralização do mesmo			e no cronograma					do site
+encarregados
+
+					Dificuldade de depuração de informa-
+					ção de eventos
+		
+					Risco do site cair devido ao tráfego					
+
+					Pode haver mudanças importantes
+					nos requisitos ao longo do 
+					desenvolvimento
+
+					Pode haver concorrentes que lancem
+					produtos antes
+
+					O código pode não ser o mais eficiente 
+					possível
+
+					Dificuldade de transição entre sistemas
+					web e mobile (portabilidade)
+
+					Necessidade do treinamento do gerente
+
+					Curva de aprendizado durante o 
+					desenvolvimento
+
+					Design do site não ser eficiente
+
+
+
