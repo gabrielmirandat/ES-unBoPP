@@ -1,0 +1,133 @@
+Atividades
+
+-> fichamento do artigo (meu)
+-> resumo do swebok (Otávio)
+-> atividade proposta (Guilherme)
+-> Slide - sobre 2 primeiros()
+
+- Ponto de função: método usado para medir tamanho do software e estimar o custo de desenvolvimento
+- Stakeholders: partes interessadas
+- Software requirements triage (SRT): processo de determinar quais requisitos um produto deve ter dado tempo e recursos disponíveis.
+
+Estimando custo de desenvolvimento usando requisitos de ponto de função, objetivo e cenário 
+
+0. Abstract
+-> Ponto de função
+-> Sistema grande e complexo é difícil medir custo 
+-> objetivo: abordagem regrada para medir custo na fase de análise de requisitos
+-> pra isso, combina requisitos de objetivo e cenário com pontos de função baseados em estimação de custo 
+-> Usa regras de análise de contexto, regras de extração de dados de função, regras de extração de funções de transação usados pra obter os pontos de função de descrições de objetivos e cenários
+-> Regras baseadas em abordagem liguistica
+-> contribuição: ajudar gerentes a decidirem quais requisitos devem ser realizados
+
+1. Intro
+-> objetivo principal do fornecedor de software: sistema que realize necessidades e expectativas das partes interessadas
+-> vida real: mais requisitos do que se pode implementar dado restrições de tempo (das próprias partes) e recurso
+-> dilema do gerente: como selecionar um pedaço dos requisitos que ainda atinja as necessidades do cliente? 
+-> SRT aumenta confiabilidade do produto e contribui na economia da compania
+-> Embora a importância da SRT, não há muito estudo e descrições. Isto ocorre devido à dificuldade da tarefa, com perigos financeiro (um erro pode causar grande perda na renda) e político (tarefa também é responsabilidade do pessoal técnico e de marketing) 
+-> como solucionar SRT
+   Davis (2003) 
+		- solução é reter custo
+   Boehm (1981) and Boehm and In (1996)
+   		- é gerenciar impacto de mudança de requisitos no custo e cronograma.
+   		- Identificar escopo e desenvolver plano apropriado na fase inicial do desenvolvimento
+
+-> como estimar custo dos requisitos
+   Larvet and Vallée (2002)
+   		- estimador baseado no texto dos requisitos
+   		- métricas textuais de predição: TNW, NKW, AUTO and MANU
+   		- possibilidade de quantificar complexidade
+   Auer, Becker, Rauber, and Biffl (2005)
+   		- método de vizualizar similaridade de casos de usos sem explícita coleta de dados
+   		- métrica implicita com similaridade textual
+   Lavazza and Valetto (1981)
+   		- estudo de caso para avaliar quantitativamente impacto de mudança de requisitos e custo das atividades necessárias pra isso
+   		- método simples de quantificar requisitos: contar labels nos requisitos textuais
+-> entretanto, poucos deles tem sucesso em empresas: subjetividade
+-> objetivo do paper: abordagem regrada para contar pontos de função de requisitos textuais através de objetivos e cenário. Composto de duas características: 
+		- requisitos textuais especificados em termos de objetivos e cenários
+		- extrair regras para contar pontos de função
+		-> Objetivo e cenário descrevem interação entre usuário ou aplicação externa e aplicação de destino
+		-> inclui dados para interação (para derivar funções de dados) e comportamento (para processar dados que regem funções de transação)
+
+2. Trabalho prévio
+-> Análise de requisitos de objetivo e cenário
+	-> antes de contar pontos de função
+	-> Adaptado de Kim et al. (2004, 2006): 
+		- provê níveis de abstração que ajudam na elicitação dos requisitos
+		- 4 níveis: negócio (identifica objetivo final do sistema), 
+					serviço (identifica serviços que devem ser prestados às partes), 
+					interação (interação entre sistema e agentes),
+					nível interno (o que o sistema precisa pra realizar a interação)
+		- um objetivo é gerado em cada nível e cenários criados para alcançar o objetivo
+	-> Usa template de objetivo: <Verb + Target + Direction + Way>
+		- ‘Withdraw cash from the ATM’ is represented as follows: ‘(Withdraw) Verb (Cash) Target (From the ATM) Dir’
+	-> Cenários tem objetivos e um Objetivo é conquistado com a execução de cenários
+	-> Usa template de cenário: 'Subject : Agent + Verb + Target : Object + Direction : (Source; Destination) + Way’
+		- ‘Tom gives me a book’ can be rewritten, according to our rules as, ‘(Tom) Agent (gives) Verb (a book) Object (to me) Direction ’
+
+-> Ponto de função
+	-> ISO14143-1 (ISO-IEC, 1998)
+	-> componentes : ILF (Internal Logical File), EIF (External Interface File), EI (External Input), EO (External Output), EQ (External inQuiry)
+	-> ILF e EIF: funções de dados; EI, EO, EQ: funções de transação
+	-> CPM: métodos para identificar as funções e a contagem dos pontos delas
+	-> Necessidade de experts para identificar e realizar a contagem dos pontos de função: 
+		- problema da mudança de requisitos: novos pontos e portanto custos.
+
+It includes data for interaction and behavior for data processing. Data for interaction can be used to derive data functions (ILF or EIF) maintained in the target application or external application. Behavior for data processing can drive transaction functions (EI, EO or EQ), which are behaviors dependent on input, output or inquiry.
+
+3. Nossa abordagem de contagem de pontos de função dos requisitos
+	-> extração no nível de interação usando objetivos e cenários
+	-> descreve interação entre usuário e aplicação externa e aplicação e aplicação de destino
+	-> inclui dados para interação e comportamentos para seu processamento
+	-> dados para interação derivam em funções de dados (ILF , EIF) mantidas na aplicação destino ou na externa
+	-> comportamento para o processamento dos dados pode dirigir funções de transação ((EI, EO, EQ), que são comportamentos dependentes de entrada, saída ou inquérito
+	-> pontos de função extraídos através de regras de análise de contexto (CA1 a CA3), de funções de dados (DFA1 a DFA3), de funções de transação (TFA1 a TFA6)
+	-> Cada regra pode ser inspecionada ou por objetivo, ou por cenário ou nenhum dos dois
+	-> Usa template de regra: <Definition (conteudo da regra), Comment (itens de consideração), Example (exemplo representativo)>
+	
+	-> de CA1 a CA3 = identificação de agentes (usuário, aplicação de destino, aplicação externa) e descobertas aplicações independentes decompostas do sistema de destino
+	
+	-> de DFA1 a DFA3 = define informações de dados ou controle entre aplicação destino e o usuário ou aplicação externa. Se dados mantidos na aplicação destino é ILF, se mantidos na aplicação externa é EIF. Também determina complexidade 
+	das funções de dados através do RET (Record Element Type) e da DET(Date Element Type)
+	
+	-> de TFA1 a TFA6 = identifica funcionalidades providas ao usuário para o processamento dos dados pelo sistema de destino. Eles são EI (External Input), EO (External Output), e EQ (External inQuiry). Exibem o comportamento para o processamento de dados. No caso objetivo/cenário, comportamentos são identificados pelos 'verbs'. No nosso caso, identificamos funções de transação com 'verb', classificamos com 'verb type' e template. Também calcula complexidade da função de transação com o FTR (File Type Reference) e DET (Data Element Type). DETC é o números de dados referidos e encontrados pelo 'target' do cenário. 
+
+
+	-> Do ponto de função, custo e cronograma são calculados de um modelo de estimação de custo 
+
+4. Case study: course registration system
+
+	CASE STUDY: COURSE REGISTRATION SYSTEM
+	4.1. Modelagem com Objetivo e cenário (Goal and scenario modeling)
+	4.2. Extração dos elementos do modelo (Extracting context elements)
+	4.3. Determinando funções de dados e complexidade (Determining data functions and complexity)
+	4.4. Determinando funções de transação e complexidade (Determining transaction functions and complexity)
+	4.5. Calculando pontos de função sem ajuste (Calculating unadjusted function point)
+	4.6. Estimando custo usando modelo de custo (Estimating cost using cost model)
+
+
+5. Evaluation
+
+	-> Para validar a utilidade do método chamamos um especialista em pontos de função, não autor do artigo, para extrair pontos de função de dois casos de uso de estudo e de dois outros projetos do mundo real (manhole management system e SDRA project). We provided the specialist with the same specification and compared the results. The results are shown in Table 7
+
+	5.1. Accuracy of extracting function point
+	5.2. Advantages supporting traceability activities
+
+6. Conclusion and future work 
+
+	-> This paper has discussed a function point extraction method from goal and scenario based requirements and it has been applied to the ‘course registration system’ and ‘order processing system’.
+
+	-> linka requisitos com pontos de funções
+
+	-> Function point is an input parameter for existing cost models.
+
+	-> Because existing approaches do not provide the linkage between requirements and cost, traceability management activities need expert’s help. However, the proposed method helps traceability management activities to be performed systematically.
+
+	-> A limitation of the proposed method is that it is not appropriate for embedded systems because function point is not suitable for embedded systems.
+
+	-> Our future work involves developing a supporting tool for estimating function point automatically and refining the rules for extracting function points (ontologies).
+
+		
+
