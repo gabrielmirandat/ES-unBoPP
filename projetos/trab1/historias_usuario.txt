@@ -1,0 +1,12 @@
+Agentes
+Usuário - (alunos, servidores, professores, de fora)
+Gerente - (itermediário de cadastro)
+Promotor de eventos - (pede para publicação de eventos)
+
+Historia 1 (promotor de eventos)
+
+Como um promotor de eventos, eu gostaria de poder postar meu evento de forma eficiente e prática, de forma que os campos a serem preenchidos no site seja o menor possível e contenha informações indispensáveis de eventos para que seja simples publicar eventos e para que os usuários não tenham qualquer dúvida relacionada ao evento
+
+Historia 2
+
+Como um usuário, eu quero que o site possua um mecanismo eficiente de busca, seja por pesquisa ou por categorias, de forma que ao pesquisar pelo nome ou etiqueta do evento sejam retornados apenas resultados relevantes e/ou ao selecionar determinadas categorias apenas relacionados a estas sejam exibidos.
