@@ -1,0 +1,18 @@
+* Baixem o php e o phpmyadmin
+http://php.net/manual/pt_BR/install.unix.debian.php
+https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04
+* ver banco no browser facil (faz CRUD massa): http://localhost/phpmyadmin
+
+se não conseguir ver o phomyadmin: http://stackoverflow.com/questions/10111455/i-cant-access-http-localhost-phpmyadmin
+
+* Incluam o sql no banco de vcs
+
+* em config/database.php
+-> colocam a conta do banco de vcs
+
+* no terminal
+-> vai até o dir do projeto
+-> roda: php -S localhost:8080
+-> no browser, coloquem na url: http://localhost:8080/
+
+qlq coisa fala
