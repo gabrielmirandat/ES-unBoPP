@@ -1,0 +1,18 @@
+* Baixar o php e o phpmyadmin
+	http://php.net/manual/pt_BR/install.unix.debian.php
+	https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-14-04
+* ver banco no browser com phpmyadmin (CRUD simples): http://localhost/phpmyadmin
+	erro comum com phomyadmin: http://stackoverflow.com/questions/10111455/i-cant-access-http-localhost-phpmyadmin
+
+* Inclua o sql de sql/ no banco
+
+* em config/database.php
+	altere o banco para o do seu servidor MySQL
+
+* no terminal
+	vá até o diretório do projeto
+	$php -S localhost:8080
+* no browser
+	abra o firefox
+	coloque na url: http://localhost:8080/
+
